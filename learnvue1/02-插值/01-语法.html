@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+      [v-cloak] {
+          display: none;
+      }
+  </style>
+</head>
+<body>
+<div id="app" v-cloak><!--解析前有v-cloak-->
+  <h2 >{{message}}</h2>
+  <h2 v-once>{{message}}</h2><!--显示一次后不变-->
+  <h2>{{firstName+' '+lastName}}</h2>
+  <h2>{{counter*2}}</h2>
+  <h2 v-html="url"></h2><!--解析链接-->
+  <h2 v-text="message">123</h2><!--覆盖-->
+  <h2 v-pre>{{message}}</h2><!--不解析-->
+  <img src="" alt="">
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  setTimeout(function (){
+
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: 'hello,666699',
+        firstName: 'dark',
+        lastName: 'pit',
+        counter: 200,
+        url: '<a href="https://www.baidu.com/">baidu</a>'
+      }
+    })
+
+  },1000)/*延迟显示*/
+
+</script>
+</body>
+</html>
