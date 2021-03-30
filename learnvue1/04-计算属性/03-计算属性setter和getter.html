@@ -8,6 +8,7 @@
 
 <div id="app">
   <h2>{{fullName}}</h2>
+  <h2>{{fullName}}</h2>
 </div>
 
 <script src="../js/vue.js"></script>
@@ -20,7 +21,7 @@
     },
     computed: {
       fullName: {
-        set(newValue) {
+        set(newValue) {//一般不需要set方法
           const names = newValue.split(' ')
           this.firstName = names[0]
           this.lastName = names[1]
