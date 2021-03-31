@@ -13,10 +13,26 @@
   <h2>{{getFullName()}}</h2>
   <h2>{{getFullName()}}</h2>
   <h2>{{getFullName()}}</h2>
+  <h2 id="tool">{{shitinass}}</h2>
 </div>
 
 <script src="../js/vue.js"></script>
 <script>
+  const tool=new Vue({
+    el: '#tool',
+    data:{
+      shit: 100,
+      ass: 200
+    },
+    computed:{
+      shitinass(){
+
+        return this.shit+this.ass
+      }
+    }
+
+
+  })
   const app = new Vue({
     el: '#app',
     data: {

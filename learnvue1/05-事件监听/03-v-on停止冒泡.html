@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03-v-on停止冒泡</title>
+</head>
+<body>
+
+<div id="app">
+  <div @click="divClick">111111
+    <!--stop使用-->
+    <button @click.stop="btnClick">按钮</button>
+  </div>
+  <a href="http://www.baidu.com" @click.prevent="aClick">百度一下</a>
+  <!--<input type="text" @keyup.enter="onEnter">-->
+  <!--监听按键-->
+  <input type="text" @keyup.enter="onEnter">
+  <!--只触发一次-->
+  <button @click.once="btnClick">1111</button>
+  <form action="baidu">
+    <!--阻止提交-->
+    <input type="submit" value="tijiao" @click.prevent="submitclick">
+  </form>
+
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+
+    },
+    methods: {
+      divClick() {
+        console.log('divClick');
+      },
+      btnClick() {
+        console.log('btnClick');
+      },
+      aClick() {
+        console.log('aClick');
+      },
+      onEnter() {
+        console.log('enter被点击');
+      },
+      submitclick(){
+
+        console.log("001");
+      }
+    }
+  })
+</script>
+
+</body>
+</html>
