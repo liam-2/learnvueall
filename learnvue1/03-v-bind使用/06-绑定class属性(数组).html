@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <title>06-绑定class属性(数组)</title>
   <style>
-    .active {
-      color: red;
-    }
+      .active {
+          color: red;
+      }
 
-    .line {
-      text-decoration: underline;
-    }
+      .line {
+          text-decoration: underline;
+      }
 
-    .large {
-      font-size: 5px;
-    }
+      .large {
+          font-size: 5px;
+      }
   </style>
 </head>
 <body>
@@ -28,19 +28,19 @@
 
 <script src="../js/vue.js"></script>
 <script>
-    let vm = new Vue({
-      el: '#app',
-      data: {
-        active: 1,
-        line: 2
+  let vm = new Vue({
+    el: '#app',
+    data: {
+      active: 1,
+      line: 2
 
-      },
-      methods: {
-        getClasses() {
-          return ['active', 'line']
-        }
+    },
+    methods: {
+      getClasses() {
+        return ['active', 'line']
       }
-    })
+    }
+  })
 </script>
 
 </body>

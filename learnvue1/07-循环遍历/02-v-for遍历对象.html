@@ -8,8 +8,12 @@
 
 <div id="app">
   <ul>
+    <!--key提高插入效率-->
+    <li v-for="items in info" :key="items">
+      {{items}}
+    </li>
     <li v-for="(value, key, index) in info">
-      {{index}}-{{value}}-{{key}}
+      {{index}}:{{value}}:{{key}}
     </li>
   </ul>
 </div>
@@ -22,7 +26,9 @@
       info: {
         name: 'why',
         age: 18,
-        height: 1.88
+        height: 1.88,
+        pig: 99,
+        shit: 1024
       }
     }
   })

@@ -9,9 +9,11 @@
 <div id="app">
   <ul>
     <li v-for="item in movies">{{item}}</li>
+    <li v-for="item in words">{{item}}</li>
     <li>-----------我是分割线-----------</li>
-    <li v-for="(item, index) in movies">{{index+1}}. {{item}}</li>
+    <li v-for="(item, index) in movies">{{index + 1}}. {{item}}</li>
   </ul>
+  <button @click="btn1()">666</button>
 </div>
 
 <script src="../js/vue.js"></script>
@@ -19,7 +21,21 @@
   const app = new Vue({
     el: '#app',
     data: {
-      movies: ['星际穿越', '大话西游', '盗梦空间', '闻香识女人']
+      movies: ['星际穿越', '大话西游', '盗梦空间', '闻香识女人'],
+      words: ['w', 'b', 'c', 'd']
+    },
+    methods: {
+      btn1() {
+       // this.words[0]='666';//索引修改非响应式
+        //this.words.push('666');
+       /* 响应式方法：
+        push/pop删除最后的元素/shift删除第一个元素/unshift最前面添加元素/
+        splice删除指定元素 splice(strat,删除几个,替换的元素)如果替换元素数大于删除几个则变为增加几个
+        sort/
+        reverse
+        vue.set(a,0,'xxx')*/
+       // this.words.sort();
+      }
     }
   })
 </script>

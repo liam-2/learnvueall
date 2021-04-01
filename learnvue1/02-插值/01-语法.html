@@ -11,10 +11,10 @@
 </head>
 <body>
 <div id="app" v-cloak><!--解析前有v-cloak-->
-  <h2 >{{message}}</h2>
+  <h2>{{message}}</h2>
   <h2 v-once>{{message}}</h2><!--显示一次后不变-->
-  <h2>{{firstName+' '+lastName}}</h2>
-  <h2>{{counter*2}}</h2>
+  <h2>{{firstName + ' ' + lastName}}</h2>
+  <h2>{{counter * 2}}</h2>
   <h2 v-html="url"></h2><!--解析链接-->
   <h2 v-text="message">123</h2><!--覆盖-->
   <h2 v-pre>{{message}}</h2><!--不解析-->
@@ -23,7 +23,7 @@
 
 <script src="../js/vue.js"></script>
 <script>
-  setTimeout(function (){
+  setTimeout(function () {
 
     const app = new Vue({
       el: '#app',
@@ -36,7 +36,7 @@
       }
     })
 
-  },1000)/*延迟显示*/
+  }, 1000)/*延迟显示*/
 
 </script>
 </body>

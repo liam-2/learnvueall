@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <title>04-绑定class属性(练习)</title>
   <style>
-    .active {
-      color: #00ffff;
-    }
+      .active {
+          color: #00ffff;
+      }
   </style>
 </head>
 <body>
@@ -26,12 +26,12 @@
   const app = new Vue({
     el: '#app',
     data: {
-    	movies: ['星际穿越', '盗梦空间', '大话西游', '少年派的奇幻漂流'],
+      movies: ['星际穿越', '盗梦空间', '大话西游', '少年派的奇幻漂流'],
       currentIndex: 0
     },
     methods: {
-    	itemClick(index) {
-    		this.currentIndex = index
+      itemClick(index) {
+        this.currentIndex = index
       }
     }
   })

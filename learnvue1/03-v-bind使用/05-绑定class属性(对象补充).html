@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <title>05-绑定class属性(对象补充)</title>
   <style>
-    .line {
-      text-decoration: underline;
-    }
+      .line {
+          text-decoration: underline;
+      }
 
-    .active {
-      color: red;
-    }
+      .active {
+          color: red;
+      }
 
-    .large {
-      font-size: 40px;
-    }
+      .large {
+          font-size: 40px;
+      }
   </style>
 </head>
 <body>
@@ -30,12 +30,12 @@
   const app = new Vue({
     el: '#app',
     data: {
-    	isLine: true,
+      isLine: true,
       isActive: true
     },
     methods: {
-    	getClasses() {
-    		return {line: this.isLine, active: this.isActive}
+      getClasses() {
+        return {line: this.isLine, active: this.isActive}
       }
     }
   })

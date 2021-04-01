@@ -1,7 +1,7 @@
 const app = new Vue({
   el: '#app',
   data: {
-    list: [
+    books : [
       {
         id: 1,
         name: '《算法导论》',
