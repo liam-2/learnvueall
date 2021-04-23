@@ -14,7 +14,7 @@
 <div id="app">
   <h2 :class="active">今天天气不错!</h2>
   <h2 :class="{'active': isActive2}">今天天气不错!</h2>
-  <h2 :class="{'active': false}">今天天气不错!</h2>
+  <h2 :class="{active: true}">今天天气不错!</h2>
   <!--类后面增加布尔值控制生效-->
   <button v-on:click="btclk()">控制</button>
 </div>
@@ -31,7 +31,7 @@
     methods: {
       btclk: function () {
 
-        this.isActive = !this.isActive
+        this.isActive2 = !this.isActive2
       }
 
     }

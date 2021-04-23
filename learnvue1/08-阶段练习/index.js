@@ -50,12 +50,29 @@ const app = new Vue({
   },
   computed: {
     totalPrice() {
-      let total = 0;
-      for (let i = 0; i < this.list.length; i++) {
+     // let total = 0;
+     /* for (let i = 0; i < this.list.length; i++) {
         let item = this.list[i];
         total += item.price * item.count;
       }
       return total
+    }*/
+
+   /* for(let i in this.list){
+      let item = this.list[i];
+      total += item.price * item.count;
+    }
+      return total*/
+      //for(let item of this.books) 更方便
+
+      return this.list.reduce(
+          function (prevalue,book){
+            return prevalue+book.price*book.count;
+
+
+          },0
+      )
+
     }
   }
 })

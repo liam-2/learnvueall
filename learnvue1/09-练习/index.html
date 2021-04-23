@@ -19,7 +19,7 @@
     </tr>
     </thead>
     <tbody>
-    <<tr v-for="(item, index) in books" :key="item.id">
+    <tr v-for="(item, index) in list" :key="item.id">
       <td>{{index + 1}}</td>
       <td>{{item.name}}</td>
       <td>{{item.date}}</td>
@@ -38,7 +38,7 @@
 </div>
 
 <script src="../js/vue.js"></script>
-<script  src="style.css"></script>
+<script src="index.js"></script>
 
 </body>
 </html>

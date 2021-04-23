@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01-v-model双向绑定</title>
+</head>
+<body>
+
+<div id="app">
+  <!--<input type="text" :value="message" @input="message = $event.target.value">-->
+  <!--<h2>{{message}}</h2>-->
+
+  <input type="text" :value="message" @input="vc">
+  <input type="text" v-model="message" >
+  <!--上面两者相等-->
+  <h2>{{message}}</h2>
+
+  <textarea v-model="message"></textarea>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+    	message: '666'
+    },
+    methods:{
+      vc(event){
+        this.message=event.target.value;
+        console.log('---');
+      }
+
+    }
+
+  })
+</script>
+
+</body>
+</html>
